@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIRI - Artificial Intelligence Response Interface">
+    <title>AIRI | AI Response Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">A</div>
+                <div>
+                    <h1>AIRI</h1>
+                    <p>AI Response Interface</p>
+                </div>
+            </div>
+            <button id="newChatBtn" class="new-chat">+ New Chat</button>
+            <div class="sidebar-info">
+                <p>Secure conversational AI</p>
+                <small>Powered by OpenAI</small>
+            </div>
+        </aside>
+
+        <main class="chat-panel">
+            <header class="topbar">
+                <div>
+                    <h2>Artificial Intelligence Response Interface</h2>
+                    <span class="status"><span class="status-dot"></span> Online</span>
+                </div>
+            </header>
+
+            <section id="chatBox" class="chat-box" aria-live="polite">
+                <div class="welcome">
+                    <div class="welcome-icon">A</div>
+                    <h2>Welcome to AIRI</h2>
+                    <p>Ask a question and start a conversation.</p>
+                </div>
+            </section>
+
+            <form id="chatForm" class="composer">
+                <textarea id="messageInput" rows="1" maxlength="4000" placeholder="Message AIRI..." required></textarea>
+                <button id="sendBtn" type="submit">Send</button>
+            </form>
+            <p class="disclaimer">AIRI can make mistakes. Verify important information.</p>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
